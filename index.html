@@ -57,6 +57,18 @@
     @media(max-width:600px){body{padding-top:104px}html{scroll-padding-top:118px}}
     @media(prefers-reduced-motion:reduce){.skill-terminal-float,.skill-chip,.skill-scene-line,.skill-scene-spark{animation:none!important}}
       .contact-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.95fr);align-items:center;gap:34px}.contact-copy{position:relative;z-index:1}.contact-copy .section-title{max-width:540px}.contact-copy .section-desc{max-width:440px}.contact-copy .email-link{margin-top:22px}.contact-socials{display:flex;gap:9px;margin-top:23px}.contact-socials a{width:37px;height:37px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:#d8ccca;font: .7rem var(--mono);transition:transform .2s,border-color .2s,color .2s}.contact-socials a:hover{transform:translateY(-3px);border-color:var(--red);color:white}.contact-art{width:100%;max-width:480px;justify-self:end}.contact-art svg{display:block;width:100%;height:auto;overflow:visible}.contact-screen{transform-origin:center;animation:contact-screen-hover 4.5s ease-in-out infinite}.contact-orbit{transform-origin:221px 160px;animation:contact-orbit-turn 24s linear infinite}.contact-float{animation:contact-float 4s ease-in-out infinite}.contact-code{animation-delay:1s}.contact-spark{transform-origin:center;animation:contact-spark 1.8s ease-in-out infinite alternate}.contact-spark-two{animation-delay:.7s}@keyframes contact-screen-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes contact-orbit-turn{to{transform:rotate(360deg)}}@keyframes contact-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes contact-spark{to{opacity:.3;transform:scale(.65)}}@media(max-width:900px){.contact-inner{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:14px}.contact-art{max-width:380px}}@media(max-width:600px){.contact-inner{grid-template-columns:1fr;gap:14px}.contact-art{width:min(100%,390px);justify-self:center;margin-top:6px}.contact-copy .section-desc{max-width:100%}}@media(prefers-reduced-motion:reduce){.contact-screen,.contact-orbit,.contact-float,.contact-spark{animation:none!important}}
+      /* Portfolio assistant */
+    .portfolio-chat{--chat-accent:#e8394a;--chat-panel:#171013;position:fixed;right:26px;bottom:24px;z-index:1200;font-family:var(--sans);color:var(--text)}
+    .chat-launcher{position:relative;width:70px;height:70px;padding:5px;border:1px solid rgba(255,135,144,.8);border-radius:50%;background:linear-gradient(145deg,#ff8790,#b91b2d);box-shadow:0 10px 34px rgba(232,57,74,.3),0 0 0 5px rgba(232,57,74,.12);cursor:pointer;transition:transform .2s,box-shadow .2s}
+    .chat-launcher:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 40px rgba(232,57,74,.4),0 0 0 7px rgba(232,57,74,.12)}
+    .chat-launcher img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:#211619}.chat-launcher:after{content:"";position:absolute;right:1px;bottom:2px;width:12px;height:12px;border:2px solid #171013;border-radius:50%;background:#5ed59a}
+    .chat-panel{position:absolute;right:0;bottom:86px;display:flex;flex-direction:column;width:min(390px,calc(100vw - 32px));height:min(570px,calc(100dvh - 130px));min-height:420px;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:23px;background:linear-gradient(155deg,#211619,#120d0f 72%);box-shadow:0 24px 80px rgba(0,0,0,.58),0 0 45px rgba(232,57,74,.09);opacity:0;visibility:hidden;transform:translateY(12px) scale(.98);transform-origin:bottom right;transition:opacity .2s,visibility .2s,transform .2s}
+    .chat-panel.is-open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}.chat-head{display:flex;align-items:center;gap:12px;padding:16px 17px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}.chat-avatar{width:43px;height:43px;flex:none;object-fit:cover;border:1px solid rgba(255,135,144,.6);border-radius:50%;background:#211619}.chat-identity{min-width:0;flex:1}.chat-title{margin:0;font-size:.95rem;letter-spacing:-.02em}.chat-subtitle{display:flex;align-items:center;gap:7px;margin:3px 0 0;color:#a99597;font-size:.7rem}.chat-subtitle i{width:7px;height:7px;border-radius:50%;background:#5ed59a;box-shadow:0 0 9px rgba(94,213,154,.45)}.chat-close{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;color:#d8ccca;font-size:1.25rem;cursor:pointer}.chat-close:hover{border-color:rgba(232,57,74,.55);color:white}
+    .chat-messages{display:flex;flex:1;flex-direction:column;gap:12px;overflow:auto;padding:18px 16px;scroll-behavior:smooth}.chat-message{max-width:88%;padding:11px 13px;border:1px solid rgba(255,255,255,.07);border-radius:15px 15px 15px 5px;background:#24191d;color:#e7dcda;font-size:.83rem;line-height:1.6;overflow-wrap:anywhere}.chat-message.user{align-self:flex-end;border-color:rgba(232,57,74,.25);border-radius:15px 15px 5px 15px;background:rgba(232,57,74,.14);color:#fff}.chat-message a{color:#ff9aa2;text-decoration:underline;text-underline-offset:3px}.chat-suggestions{display:flex;flex-wrap:wrap;gap:7px;padding:0 15px 13px}.chat-suggestion{padding:7px 10px;border:1px solid rgba(232,57,74,.35);border-radius:999px;background:rgba(232,57,74,.06);color:#eabfc2;font-size:.69rem;cursor:pointer;transition:background .2s,border-color .2s}.chat-suggestion:hover{border-color:var(--chat-accent);background:rgba(232,57,74,.15);color:#fff}
+    .chat-message{white-space:pre-wrap}.chat-message.typing{color:#b7a9a8;font-style:italic}.chat-send:disabled{opacity:.55;cursor:wait}
+    .chat-form{display:flex;align-items:center;gap:9px;padding:11px 13px;border-top:1px solid var(--line);background:rgba(255,255,255,.02)}.chat-input{min-width:0;flex:1;height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.16);border-radius:999px;outline:none;background:#100b0d;color:#fff;font:inherit;font-size:.8rem}.chat-input:focus{border-color:rgba(255,135,144,.75);box-shadow:0 0 0 3px rgba(232,57,74,.12)}.chat-input::placeholder{color:#8f8082}.chat-send{width:43px;height:43px;flex:none;display:grid;place-items:center;border:0;border-radius:50%;background:linear-gradient(145deg,#f04c5c,#c8223a);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:0 6px 18px rgba(232,57,74,.23)}.chat-send:hover{filter:brightness(1.12)}.chat-launcher:focus-visible,.chat-close:focus-visible,.chat-suggestion:focus-visible,.chat-send:focus-visible{outline:3px solid #ff8790;outline-offset:3px}
+    @media(max-width:600px){.portfolio-chat{right:16px;bottom:16px}.chat-launcher{width:62px;height:62px}.chat-panel{position:fixed;right:10px;bottom:88px;width:calc(100vw - 20px);height:min(620px,calc(100dvh - 110px));min-height:360px;border-radius:20px}.chat-message{font-size:.8rem}}
+    @media(prefers-reduced-motion:reduce){.chat-panel,.chat-launcher,.chat-suggestion{transition:none!important}.chat-messages{scroll-behavior:auto}}
   </style>
 </head>
 <body>
@@ -147,6 +159,19 @@
       <img class="project-dialog-image" src="parlak.png" alt="Aperçu du projet ParLak de réservation et gestion de parkings">
     </section>
   </div>
+    <aside class="portfolio-chat" aria-label="Assistant du portfolio">
+    <section class="chat-panel" id="portfolioChatPanel" role="dialog" aria-modal="false" aria-labelledby="portfolioChatTitle" aria-hidden="true">
+      <header class="chat-head">
+        <img class="chat-avatar" src="logo_malak_tamrani_rouge.png" alt="">
+        <div class="chat-identity"><h2 class="chat-title" id="portfolioChatTitle">Malak <span aria-hidden="true">♡</span></h2><p class="chat-subtitle"><i aria-hidden="true"></i> Assistant du portfolio</p></div>
+        <button class="chat-close" type="button" aria-label="Fermer la discussion">×</button>
+      </header>
+      <div class="chat-messages" id="portfolioChatMessages" role="log" aria-live="polite" aria-relevant="additions text"><div class="chat-message">Bonjour ! Je peux vous présenter les projets, le parcours et les compétences de Malak. Que souhaitez-vous découvrir ?</div></div>
+      <div class="chat-suggestions" aria-label="Questions suggérées"><button class="chat-suggestion" type="button" data-question="Quels sont ses projets ?">Projets</button><button class="chat-suggestion" type="button" data-question="Quel est son parcours ?">Parcours</button><button class="chat-suggestion" type="button" data-question="Quelles sont ses compétences ?">Compétences</button><button class="chat-suggestion" type="button" data-question="Où trouver son CV ?">CV</button></div>
+      <form class="chat-form" id="portfolioChatForm"><label class="skip-link" for="portfolioChatInput">Votre message</label><input class="chat-input" id="portfolioChatInput" name="message" type="text" placeholder="Écrivez votre message…" autocomplete="off" maxlength="500" required><button class="chat-send" type="submit" aria-label="Envoyer le message">➤</button></form>
+    </section>
+    <button class="chat-launcher" type="button" aria-label="Ouvrir l’assistant du portfolio" aria-controls="portfolioChatPanel" aria-expanded="false"><img src="logo_malak_tamrani_rouge.png" alt=""></button>
+  </aside>
   <footer class="footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -281,5 +306,21 @@
       });
     })();
   </script>
+<script>
+(() => {
+ const panel=document.getElementById('portfolioChatPanel'), launcher=document.querySelector('.chat-launcher'), closeButton=document.querySelector('.chat-close'), form=document.getElementById('portfolioChatForm'), input=document.getElementById('portfolioChatInput'), messages=document.getElementById('portfolioChatMessages');
+ const sendButton=form&&form.querySelector('.chat-send'); if(!panel||!launcher||!form)return; const history=[];
+ const open=()=>{panel.classList.add('is-open');panel.setAttribute('aria-hidden','false');launcher.setAttribute('aria-expanded','true');input.focus()};
+ const close=()=>{panel.classList.remove('is-open');panel.setAttribute('aria-hidden','true');launcher.setAttribute('aria-expanded','false');launcher.focus()};
+ launcher.addEventListener('click',()=>panel.classList.contains('is-open')?close():open()); closeButton.addEventListener('click',close);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('is-open'))close()});
+ const add=(text,kind='')=>{const node=document.createElement('div');node.className=`chat-message${kind?` ${kind}`:''}`;node.textContent=text;messages.append(node);messages.scrollTop=messages.scrollHeight;return node};
+ const send=async value=>{const question=value.trim();if(!question||form.dataset.busy==='true')return;add(question,'user');history.push({role:'user',content:question});input.value='';input.disabled=true;sendButton.disabled=true;form.dataset.busy='true';const wait=add('Je réfléchis…','typing');
+  try{const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history.slice(-12)})});const data=await response.json();if(!response.ok)throw Error(data.error||'Service indisponible');if(!data.reply)throw Error('Réponse vide');history.push({role:'assistant',content:data.reply});wait.remove();add(data.reply)}
+  catch(error){wait.remove();add(error.message || "Le service IA est indisponible.");history.pop();console.error('Chat API error:',error.message)}
+  finally{input.disabled=false;sendButton.disabled=false;form.dataset.busy='false';input.focus()}};
+ form.addEventListener('submit',e=>{e.preventDefault();send(input.value)});document.querySelectorAll('.chat-suggestion').forEach(b=>b.addEventListener('click',()=>send(b.dataset.question||b.textContent)));
+})();
+</script>
 </body>
 </html>
